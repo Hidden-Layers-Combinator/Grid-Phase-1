@@ -12,8 +12,9 @@ import shutil # For cleaning up temporary directories
 # IMPORTANT: Replace "GEMINI_API_KEY" with the actual key in your .streamlit/secrets.toml
 # Example .streamlit/secrets.toml:
 # GEMINI_API_KEY = "YOUR_ACTUAL_GEMINI_API_KEY_HERE"
+KEY=st.secrets["KEY"]
 try:
-    genai.configure(api_key="AIzaSyArJnjxicFsu60Ns6Sx7v92rkK_bBywd3k")
+    genai.configure(api_key=KEY)
 except KeyError:
     st.error("Gemini API Key not found. Please set it in .streamlit/secrets.toml")
     st.stop()
