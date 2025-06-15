@@ -1,8 +1,10 @@
 streamlit==1.43.0
 manim==0.19.0
 manimpango==0.6.0
+google-generativeai
 pycairo==1.27.0
 sympy
 gtts
 pydub
 moviepy==1.0.3
+requests
