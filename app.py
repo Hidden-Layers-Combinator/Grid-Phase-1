@@ -99,7 +99,7 @@ Student Query:
                     "manim", "-ql", manim_file, "AnimationScene", "--output_file", video_file
                 ], capture_output=True, text=True, check=True) # check=True will raise CalledProcessError
             except subprocess.CalledProcessError as e:
-                st.error(f"❌ Manim rendering failed with exit code {e.returncode}.")
+                st.error(f"❌ Video rendering failed with exit code {e.returncode}.")
                 st.text_area("🔧 Error Log (Manim STDOUT):", e.stdout)
                 st.text_area("🔧 Error Log (Manim STDERR):", e.stderr)
                 st.stop()
