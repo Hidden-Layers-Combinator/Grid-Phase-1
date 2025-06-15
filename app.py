@@ -85,14 +85,7 @@ Student Query:
 
         with open(manim_file, "w") as f:
             f.write(clean_code)
-
-        st.subheader("Generated Manim Code:")
-        st.code(clean_code, language="python")
-
-        st.subheader("Generated Voiceover Script:")
-        st.write(voice_text)
-
-        with st.spinner("🎞 Rendering animation using Manim..."):
+        with st.spinner("🎞 Rendering animation..."):
             try:
                 # Use --output_file to specify the exact output path
                 result = subprocess.run([
